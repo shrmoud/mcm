@@ -24,12 +24,13 @@ for i in range(len(mylist)):
    #print mysplit
     start = mysplit[1]
     end = mysplit[2]
-    #w = int(mysplit[3])
+    w = (int(mysplit[3])/100000)
     #print type(w)
     tup = (start,end)
     tuplist.append(tup)
-    G.add_edge(start, end)#, weight= (w/1000))
-
+    #G.add_edge(start, end)#, weight= (w/1000))
+    G.add_edge(start,end,color='red',weight=w,size=10)
+    
 print("Length of tuple list")
 print (len(tuplist))
                             
@@ -40,5 +41,5 @@ print("Number of Edges of graph: ")
 print(len(G.edges()))
 
 nx.draw(G)
-plt.savefig("mypath2.png") # save as png
+plt.savefig("edges.png") # save as png
 plt.show() # display
