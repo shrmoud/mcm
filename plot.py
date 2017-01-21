@@ -23,12 +23,15 @@ with open('data.csv', 'rb') as csvfile:
 
 for i in range(len(mylist)):
     #j = i+1
-    start = (mylist[i].split(","))[1]
-    end = (mylist[i].split(","))[2]
-    w = (mylist[i].split(","))[3]
+    mysplit = mylist[i].split(",")
+    #print mysplit
+    start = mysplit[1]
+    end = mysplit[2]
+    w = int(mysplit[3])
+    #print type(w)
     tup = (start,end)
     tuplist.append(tup)
-    G.add_edge(start, end, weight=w)
+    G.add_edge(start, end, weight= (w/1000))
     #while(j == (len(mylist)):
           #jstart = (mylist[j].split(","))[1]
           #jend = (mylist[j].split(","))[2]
@@ -46,5 +49,5 @@ for i in range(len(mylist)):
 #print(G.edges())
 
 nx.draw(G)
-plt.savefig("weightpath.png") # save as png
+plt.savefig("weightpath2.png") # save as png
 plt.show() # display
