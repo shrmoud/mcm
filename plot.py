@@ -25,9 +25,10 @@ for i in range(len(mylist)):
     #j = i+1
     start = (mylist[i].split(","))[1]
     end = (mylist[i].split(","))[2]
+    w = (mylist[i].split(","))[3]
     tup = (start,end)
     tuplist.append(tup)
-    G.add_edge(start, end)#, weight=4)
+    G.add_edge(start, end, weight=w)
     #while(j == (len(mylist)):
           #jstart = (mylist[j].split(","))[1]
           #jend = (mylist[j].split(","))[2]
@@ -45,5 +46,5 @@ for i in range(len(mylist)):
 #print(G.edges())
 
 nx.draw(G)
-plt.savefig("path.png") # save as png
+plt.savefig("weightpath.png") # save as png
 plt.show() # display
