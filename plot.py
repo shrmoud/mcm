@@ -29,7 +29,7 @@ for i in range(len(mylist)):
     tup = (start,end)
     tuplist.append(tup)
     #G.add_edge(start, end)#, weight= (w/1000))
-    G.add_edge(start,end,color='red',weight=w,size=10)
+    G.add_edge(start,end,color='red',weight=w,size=1)
     
 print("Length of tuple list")
 print (len(tuplist))
@@ -41,5 +41,5 @@ print("Number of Edges of graph: ")
 print(len(G.edges()))
 
 nx.draw(G)
-plt.savefig("edges.png") # save as png
+plt.savefig("1edges.png") # save as png
 plt.show() # display
