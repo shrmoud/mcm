@@ -31,7 +31,7 @@ for i in range(len(mylist)):
     #print type(w)
     tup = (start,end)
     tuplist.append(tup)
-    G.add_edge(start, end, weight= (w/1000))
+    G.add_edge(start, end)#, weight= (w/1000))
     #while(j == (len(mylist)):
           #jstart = (mylist[j].split(","))[1]
           #jend = (mylist[j].split(","))[2]
